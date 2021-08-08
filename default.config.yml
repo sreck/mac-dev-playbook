@@ -26,13 +26,11 @@ sudoers_custom_config: ''
 
 # dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
 dotfiles_repo: https://github.com/sreck/dotfiles.git
-# dotfiles_repo_version: main
+dotfiles_repo_version: main
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 dotfiles_files:
   - .zshrc
-  # - .gitignore
-  # - .inputrc
   - .osx
   - .vimrc
   - .config/alacritty
@@ -40,6 +38,7 @@ dotfiles_files:
   - .tmux
   - .config/nvim
   - .config/fish
+  - foobar.md
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
@@ -82,7 +81,6 @@ homebrew_installed_packages:
   - neovim
   - vim
   - bat
-  - alacritty-themes
 
 
 
@@ -95,18 +93,18 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - chromedriver
-  - docker
+  # - docker
   - dropbox
-  - firefox
-  - google-chrome
+  # - firefox
+  # - google-chrome
   - handbrake
   - licecap
   - sublime-text
   - vagrant
   - iterm2
   - rectangle
+  # - raycast
   - alacritty
-  - raycast
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -126,7 +124,9 @@ gem_packages: []
 # - name: bundler
 #   state: present # present/absent/latest, default: present
 #   version: "~> 1.15.1" # default: N/A
-npm_packages: []
+npm_packages:
+  - alacritty-themes
+# npm_packages: []
 # - name: webpack
 #   state: present # present/absent/latest, default: present
 #   version: "^2.6" # default: N/A
