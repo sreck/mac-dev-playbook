@@ -24,15 +24,22 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+# dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/sreck/dotfiles.git
+# dotfiles_repo_version: main
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 dotfiles_files:
   - .zshrc
-  - .gitignore
-  - .inputrc
+  # - .gitignore
+  # - .inputrc
   - .osx
   - .vimrc
+  - .config/alacritty
+  - .tmux.conf
+  - .tmux
+  - .config/nvim
+  - .config/fish
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
@@ -62,6 +69,24 @@ homebrew_installed_packages:
   - wget
   - wrk
   - zsh-history-substring-search
+  - fish
+  - fzf
+  - exa
+  - just
+  - dust
+  - exa
+  - tmux
+  - lua
+  - luarocks
+  - universal-ctags
+  - neovim
+  - vim
+  - bat
+  - alacritty-themes
+
+
+
+
 
 homebrew_taps:
   - homebrew/core
@@ -76,11 +101,12 @@ homebrew_cask_apps:
   - google-chrome
   - handbrake
   - licecap
-  - sequel-ace
-  - slack
   - sublime-text
-  - transmit
   - vagrant
+  - iterm2
+  - rectangle
+  - alacritty
+  - raycast
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -110,7 +136,7 @@ pip_packages: []
 #   version: "0.16.3" # default: N/A
 
 # Set to 'true' to configure Sublime Text.
-configure_sublime: false
+configure_sublime: true
 sublime_base_path: '~/Library/Application Support/Sublime Text'
 sublime_config_path: "Packages/User"
 sublime_package_control:
@@ -120,7 +146,6 @@ sublime_package_control:
   - "GitHub Flavored Markdown Preview"
   - "Jinja2"
   - "Package Control"
-  - "PHP-Twig"
   - "Pretty JSON"
   - "SublimeLinter"
   - "SublimeLinter-contrib-yamllint"
